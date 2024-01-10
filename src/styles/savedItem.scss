@@ -1,0 +1,139 @@
+.items{
+    @include configWithHieight(98%,98%);
+    @include configFlex();
+    > .item_list{
+        @include configWithHieight(100%,90%);
+        @include configFlex(start,center,column);
+        gap: 1rem;
+        background: rgba(1, 0, 27, 0.432);
+        border:1px solid white ;
+        border-radius: 20px;
+        padding: 1rem 0;
+        overflow-x: auto;
+    > .no_item{
+        @include configWithHieight();
+        @include configFlex(center,center,column);
+     > h1{
+            color: $text_color;
+        }
+     > button{
+        @include configButtonInput();
+        margin-right: 1rem;
+        color: $button_text_color;
+        background: $button_background_color;
+        background: $button_liner_background_color;
+        transition: 2s;
+        &:hover{
+          background: $button_hover_background_color;
+          background: $button_hover_liner_background_color;
+        }
+     }
+    }
+        > .see_less{
+            @include configWithHieight(95%,10%);
+            @include configFlex(start,center,column);
+            background: black;
+            border:1px solid white ;
+            padding:0 1rem;
+            border-radius: 20px;
+            .item_name{
+                @include configWithHieight(100%,auto);
+                @include configFlex(space-between,center,row);
+                > h3{
+                    text-transform: capitalize;
+                }
+                > div{
+                    > .see_btn{
+                        @include configButtonInput();
+                        margin-right: 1rem;
+                        color: $button_text_color;
+                        background: $button_background_color;
+                        background: $button_liner_background_color;
+                        transition: 2s;
+                        &:hover{
+                          background: $button_hover_background_color;
+                          background: $button_hover_liner_background_color;
+                        }
+                    }
+                    > .delete_btn{
+                        @include configButtonInput();
+                        margin-right: 1rem;
+                        color: $button_text_color;
+                        background: red;
+                        transition: 1s;
+                        &:hover{
+                          background: rgb(200, 14, 14);
+                        }
+                    }
+                }
+            }
+            .item_details{
+                display: none;
+                // @include configWithHieight(100%,auto);
+                // @include configFlex(start,center,row);
+                // gap: 1rem;
+                // flex-wrap: wrap;
+                // > div{
+                //     @include configFlex(start,center,row);
+                //     background: rgba(76, 76, 76, 0.742);
+                //     padding: 0 0.5rem;
+                //     border-radius: 20px;
+                //     gap: 1rem;
+                // }
+            }
+        }
+        > .see_more{
+            @include configWithHieight(95%,auto);
+            @include configFlex(start,center,column);
+            background: black;
+            border:1px solid white ;
+            padding:0 1rem;
+            border-radius: 20px;
+            .item_name{
+                @include configWithHieight(100%,auto);
+                @include configFlex(space-between,center,row);
+                > h3{
+                    text-transform: capitalize;
+                }
+                > div{
+                    > .see_btn{
+                        @include configButtonInput();
+                        margin-right: 1rem;
+                        color: $button_text_color;
+                        background: $button_background_color;
+                        background: $button_liner_background_color;
+                        transition: 2s;
+                        &:hover{
+                          background: $button_hover_background_color;
+                          background: $button_hover_liner_background_color;
+                        }
+                    }
+                    > .delete_btn{
+                        @include configButtonInput();
+                        margin-right: 1rem;
+                        color: $button_text_color;
+                        background: red;
+                        transition: 1s;
+                        &:hover{
+                          background: rgb(200, 14, 14);
+                        }
+                    }
+                }
+            }
+            .item_details{
+                @include configWithHieight(100%,auto);
+                @include configFlex(start,center,row);
+                gap: 1rem;
+                flex-wrap: wrap;
+                padding-block: 1rem;
+                > div{
+                    @include configFlex(start,center,row);
+                    background: rgba(76, 76, 76, 0.742);
+                    padding: 0 0.5rem;
+                    border-radius: 20px;
+                    gap: 1rem;
+                }
+            }
+        }
+    }
+}

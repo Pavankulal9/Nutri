@@ -1,0 +1,32 @@
+.header, .footer{
+    @include header_footer();
+    @include configFlex(space-between);
+    > div{
+      @include configFlex();
+      gap: 0.8rem;
+      padding:0 0.8rem;
+      >h2{
+        color: $button_text_color;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      >img{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+      }
+      > button{
+        @include configButtonInput();
+        color: $button_text_color;
+        background: $button_background_color;
+        background: $button_liner_background_color;
+        transition: 2s;
+        &:hover{
+          background: $button_hover_background_color;
+          background: $button_hover_liner_background_color;
+        }
+      }
+    }
+  }
+  
+  

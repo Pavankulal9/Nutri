@@ -1,0 +1,97 @@
+.home{
+    @include configWithHieight(98%,98%);
+    @include configFlex(center,start,column);
+    > .search_bar{
+        @include configWithHieight(100%,auto);
+        @include configFlex();
+        // border: 1px solid red;
+        padding: 1rem 0;
+        > input{
+            @include configWithHieight(50%,auto);
+            @include configButtonInput();
+            padding: 1rem;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+    }
+    > .item_nutritions{
+        @include configWithHieight(100%,80%);
+         background: rgba(1, 0, 27, 0.432);
+         border:1px solid white ;
+        border-radius: 20px;
+       > .message{
+        @include configWithHieight(100%,100%);
+        @include configFlex(); 
+        text-transform: capitalize;
+        border-radius: 20px;
+        > h1{
+            color: $text_color;
+        }
+       }
+       > .itemBox{
+        @include configWithHieight(100%,100%);
+        border-radius: 20px;
+        text-align: center;
+        >h2{
+            text-transform: uppercase;
+        }
+        > button{
+            @include configButtonInput();
+            color: $button_text_color;
+            background: $button_background_color;
+            background: $button_liner_background_color;
+            transition: 2s;
+            &:hover{
+              background: $button_hover_background_color;
+              background: $button_hover_liner_background_color;
+            }
+        }
+        > div{
+            @include configWithHieight(100%,80%);
+            @include configFlex(); 
+            flex-wrap: wrap;
+            gap: 1rem;
+            > div{
+                @include configWithHieight(250px,auto);
+                background: rgba(0, 0, 0, 0.982);
+                border:1px solid white ;
+                border-radius: 10px;
+                padding: 1rem;
+                > p{
+                    font-weight: 500; 
+                }
+            }
+        }
+       }
+
+      >.loading{
+        @include configWithHieight();
+        @include configFlex(); 
+        background: rgb(2,0,36);
+        border-radius: 20px;
+        background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(76,79,103,1) 30%, rgba(166,175,185,1) 100%);
+        animation: loading 0.8s ease-in 1s infinite alternate ;
+        @keyframes loading {
+            0%{
+                background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(76,79,103,1) 50%, rgba(166,175,185,1) 100%);
+            }
+            0%{
+                background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(76,79,103,1) 70%, rgba(166,175,185,1) 100%);
+            }
+            25%{
+                background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(76,79,103,1) 90%, rgba(166,175,185,1) 100%);
+            }
+            50%{
+                background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(76,79,103,1) 70%, rgba(166,175,185,1) 100%);
+            }
+            75%{
+                background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(76,79,103,1) 50%, rgba(166,175,185,1) 100%);
+            }
+            100%{
+                background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(76,79,103,1) 30%, rgba(166,175,185,1) 100%);
+            }
+      }
+      }
+    }
+
+}

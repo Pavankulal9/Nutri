@@ -1,0 +1,25 @@
+@mixin configWithHieight($w:100%,$h:100%){
+ width: $w;
+ height: $h;
+}
+
+@mixin header_footer(){
+    width: 98%;
+    height: 8%;
+    border-radius: 8px;
+    background: $header_and_footer_background_color;
+    background: $header_and_footer_liner_background_color;
+    border: $header_and_footer_border;
+}
+
+@mixin configButtonInput(){
+    border: none;
+    outline: none;
+}
+
+@mixin configFlex($jc:center,$al:center,$fd:row){
+    display: flex;
+    justify-content: $jc;
+    align-items: $al;
+    flex-direction: $fd;
+}
