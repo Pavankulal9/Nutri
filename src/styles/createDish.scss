@@ -1,0 +1,108 @@
+.create_dish{
+    @include configWithHieight(98%,80%);
+    @include configFlex(center,center,column);
+ > .details{
+    @include configWithHieight(100%,80%);
+    text-align: center;
+    background: $display_box_background_color;
+    border:1px solid white ;
+    border-radius: 20px;
+    overflow-x: auto;
+    > .saved_items{
+        @include configWithHieight(98%,auto);
+        @include configFlex(start,start,column,1rem);
+        padding: 1rem 1.7rem;
+        >.dish_name{
+            @include configWithHieight(98%,20%);
+            @include configFlex(start,center,row,1rem);
+            > input{
+               width: 50%;
+               border:1px solid white ;
+               font-size: 1rem;
+               padding: 0.6rem;
+               border-radius: 5px;
+               background: black;
+            }
+            > label{
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+        }
+        > .select_item{
+            @include configWithHieight(100%,auto);
+            @include configFlex(center,start,column,1rem);
+            > label{
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+            div{
+                @include configWithHieight(100%,100%);
+                @include configFlex(start,center,row,1rem);
+                flex-wrap: wrap;
+                > div{
+                   width: auto;
+                   background: $itemList_background_color ;
+                   padding: 0 1rem;
+                   border-radius: 20px;
+                   border: 1px solid white;
+                   transition: 1s;
+                   &:hover{
+                     background:rgba(76, 76, 76, 0.742);
+                   }
+                }
+            }
+        }
+    }
+    .selected_item{
+        @include configWithHieight(100%,auto);
+        @include configFlex(center,center,column,1rem);
+        padding:0 1rem;
+        > label{
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+       
+        > .items{
+            @include configWithHieight(98%,auto);
+            @include configFlex(center,start,column,1rem);
+            > label{
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+            > div{
+                @include configWithHieight(100%,100%);
+                @include configFlex(start,center,row,1rem);
+                flex-wrap: wrap;
+               > div{
+                  background: $itemList_background_color ;
+                  padding: 0 1rem;
+                  border-radius: 20px;
+                  border: 1px solid white;
+                  transition: 1s;
+                  &:hover{
+                    background:rgba(76, 76, 76, 0.742);
+                  }
+               }
+            }
+        }
+    }
+    
+    > button{
+        @include configButtonInput();
+        margin-top: 2rem;
+        color: $button_text_color;
+        background: $button_background_color;
+        background: $button_liner_background_color;
+        transition: 2s;
+        &:hover{
+          background: $button_hover_background_color;
+          background: $button_hover_liner_background_color;
+        }
+    }
+
+    > p{
+        color: rgb(193, 37, 37);
+        font-weight: bold;
+    }
+ }
+}

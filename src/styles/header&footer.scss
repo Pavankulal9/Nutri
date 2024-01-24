@@ -1,6 +1,9 @@
 .header, .footer{
     @include header_footer();
     @include configFlex(space-between);
+    > span{
+      padding: 0 1rem;
+    }
     > div{
       @include configFlex();
       gap: 0.8rem;
@@ -11,8 +14,7 @@
         font-weight: 600;
       }
       >img{
-        width: 45px;
-        height: 45px;
+       @include configWithHieight(45px,45px);
         border-radius: 50%;
       }
       > button{
@@ -29,4 +31,19 @@
     }
   }
   
-  
+  @media only screen and (max-width:500px) {
+    .header,.footer{
+      > div{
+        gap: 0.5rem;
+        >h2{
+          font-size: 1rem;
+        }
+        > img{
+          @include configWithHieight(35px,35px)
+        }
+        > button{
+          font-size: 0.8rem;
+        }
+      }
+    }
+}

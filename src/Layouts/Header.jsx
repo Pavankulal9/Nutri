@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom'
-import logo from '../../assets/nutri_logo.png'
+import logo from '../assets/nutri_logo.png'
 const Header = () => {
   const navigate = useNavigate();
   return (
     <nav  className='header'>
-      <div>
+      <div onClick={()=> navigate('/')}>
         <img src={logo} alt="logo" />
         <h2>Nutri</h2>
       </div>

@@ -1,7 +1,7 @@
-import Item from "./Item";
-import Loading from './Loading';
-import Items from "./items";
-
+import {toast} from 'react-hot-toast';
+import Loading from '../Pages/Loading';
+import Items from "./Items";
+import PropTypes from 'prop-types'
 const ItemList = ({fetchitem,loading,search}) => {
   
   const saveHandler= (item)=>{
@@ -11,10 +11,11 @@ const ItemList = ({fetchitem,loading,search}) => {
     }else{
        const isItemPresent = savedItem.find((i)=> item.name === i.name);
        if(isItemPresent){
-         console.log('data present')  
+        toast.error(`${item.name} already saved!`,{duration:4000,position:'top-center',style:{background: 'rgb(0,0,0)',color:'white'}});  
        }else{
-         savedItem.push(item);
+         savedItem.unshift(item);
          window.localStorage.setItem('saved_item',JSON.stringify(savedItem));
+         toast.success(`${item.name} saved successfully`,{duration:4000,position:'top-center',style:{background: 'rgb(0,0,0)',color:'white'}});
       }   
     }
   }
@@ -40,6 +41,12 @@ const ItemList = ({fetchitem,loading,search}) => {
             <div className="message"><h1>{search} not found!</h1></div> 
         ) 
   }
+}
+
+ItemList.propTypes = {
+  fetchitem: PropTypes.array.isRequired,
+  loading: PropTypes.bool.isRequired,
+  search: PropTypes.string.isRequired
 }
 
 export default ItemList

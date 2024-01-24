@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import Item from './Item';
-import Items from './items';
+import Items from '../components/Items';
 
 const SavedItems = () => {
     const [savedItem,setSavedItem]= useState([]);

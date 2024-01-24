@@ -1,10 +1,9 @@
 .home{
-    @include configWithHieight(98%,98%);
+    @include configWithHieight(98%,80%);
     @include configFlex(center,start,column);
     > .search_bar{
         @include configWithHieight(100%,auto);
         @include configFlex();
-        // border: 1px solid red;
         padding: 1rem 0;
         > input{
             @include configWithHieight(50%,auto);
@@ -16,9 +15,10 @@
     }
     > .item_nutritions{
         @include configWithHieight(100%,80%);
-         background: rgba(1, 0, 27, 0.432);
+         background: $display_box_background_color;
          border:1px solid white ;
-        border-radius: 20px;
+         border-radius: 20px;
+         overflow-x: auto;
        > .message{
         @include configWithHieight(100%,100%);
         @include configFlex(); 
@@ -29,13 +29,14 @@
         }
        }
        > .itemBox{
-        @include configWithHieight(100%,100%);
+        @include configWithHieight(100%,auto);
         border-radius: 20px;
         text-align: center;
         >h2{
             text-transform: uppercase;
         }
         > button{
+            margin: 1rem 0;
             @include configButtonInput();
             color: $button_text_color;
             background: $button_background_color;
@@ -53,7 +54,7 @@
             gap: 1rem;
             > div{
                 @include configWithHieight(250px,auto);
-                background: rgba(0, 0, 0, 0.982);
+                background: $itemList_background_color;
                 border:1px solid white ;
                 border-radius: 10px;
                 padding: 1rem;
@@ -61,16 +62,16 @@
                     font-weight: 500; 
                 }
             }
-        }
+         }
        }
-
-      >.loading{
+       
+       >.loading{
         @include configWithHieight();
         @include configFlex(); 
         background: rgb(2,0,36);
         border-radius: 20px;
         background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(76,79,103,1) 30%, rgba(166,175,185,1) 100%);
-        animation: loading 0.8s ease-in 1s infinite alternate ;
+        animation: loading 0.8s ease-in-out 1s infinite alternate ;
         @keyframes loading {
             0%{
                 background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(76,79,103,1) 50%, rgba(166,175,185,1) 100%);
@@ -90,8 +91,40 @@
             100%{
                 background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(76,79,103,1) 30%, rgba(166,175,185,1) 100%);
             }
-      }
+        }
       }
     }
+}
+@media only screen and (max-width:840px) {
+    .home{
+       > .item_nutritions{
+        > .message{
+            > h1{
+              font-size: 2rem;
+            }
+          }
+        }
+    }
+}
 
+@media only screen and (max-width:500px) {
+    .home{
+    >.search_bar{
+        > input{
+            width: 90%;
+        }
+    }
+       > .item_nutritions{
+        > .message{
+            > h1{
+              font-size: 1.5rem;
+            }
+          }
+          >.loading{
+            > h1{
+               font-size: 2rem;
+            }
+          }
+        }
+    }
 }

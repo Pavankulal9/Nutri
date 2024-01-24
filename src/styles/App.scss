@@ -3,59 +3,21 @@
 @import "mixure.scss";
 @import "header&footer.scss";
 @import "home.scss";
-@import "savedItem.scss";
-
+@import "savedItem&myDishes.scss";
+@import "createDish.scss";
 
 #root {
-  @include configWithHieight(100vw,100vh);
   margin: 0;
   padding: 0;
   background: $main_background_color;
   background: $main_liner_background_color;
   box-sizing: border-box;
-  overflow-y: auto;
-  overflow-x: hidden;
-  color: white;
+  color: $main_text_color;
 }
 
 
 .app{
-  @include configWithHieight();
-  padding: 0.2rem 0.9rem;
+  @include configWithHieight(100vw,100dvh);
+  @include configFlex(center,center,column);
+  // overflow-x: auto;
 }
-
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */

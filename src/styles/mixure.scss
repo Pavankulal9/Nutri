@@ -17,9 +17,10 @@
     outline: none;
 }
 
-@mixin configFlex($jc:center,$al:center,$fd:row){
+@mixin configFlex($jc:center,$al:center,$fd:row,$gap:0rem){
     display: flex;
     justify-content: $jc;
     align-items: $al;
     flex-direction: $fd;
+    gap: $gap;
 }
