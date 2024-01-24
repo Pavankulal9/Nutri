@@ -52,6 +52,7 @@ const CreateDish = () => {
  
   const removeItemHandler =(item)=>{
     const newItem =selectedItem.filter((i)=> i.name !== item.name);
+    toast.success(`${item.name} removed`,{duration:4000,position:'top-center',style:{background: 'rgb(0,0,0)',color:'white'}});
     setSelectedItem(newItem);
   }
 
