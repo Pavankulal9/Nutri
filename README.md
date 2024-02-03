@@ -25,33 +25,21 @@ Nutri is a web application built using the famous and well-known JavaScript libr
 ## Screenshots
 
 - **Home Page:**
-  ![Main Page](https://res.cloudinary.com/dnh2skxdh/image/upload/v1702104515/M-Flix/home_page_1_libb4e.png)
-  - 
-  ![Main Page](https://res.cloudinary.com/dnh2skxdh/image/upload/v1702104608/M-Flix/home_page_2_nhrlho.png)
-  -
-  ![Main Page](https://res.cloudinary.com/dnh2skxdh/image/upload/v1702104619/M-Flix/home_page_3_gwinhj.png)
+  ![Main Page](https://res.cloudinary.com/dnh2skxdh/image/upload/v1706969923/Nutri/home_page_nrnxls.png)
 
-- **Movie Details:**
-  - I recommed watch this movie!
-  ![Movie details](https://res.cloudinary.com/dnh2skxdh/image/upload/v1702104938/M-Flix/movie_details_go5xkt.png)
+- **Search Bar:**
+  ![Search example](https://res.cloudinary.com/dnh2skxdh/image/upload/v1706969935/Nutri/search_example_bsh2ts.png)
 
-- **Search Movie:**
-  ![Search](https://res.cloudinary.com/dnh2skxdh/image/upload/v1702105191/M-Flix/search_lc9hji.png)
-  - I recommed watch this movie!
-  ![Searched Movie](https://res.cloudinary.com/dnh2skxdh/image/upload/v1702105213/M-Flix/kantara_ejkwmc.png)
+- **Saved Items:**
+  ![Saved Items page](https://res.cloudinary.com/dnh2skxdh/image/upload/v1706969942/Nutri/saved_items_zjb96j.png)
 
-- **Menu Bar:**
-  ![Menu bar](https://res.cloudinary.com/dnh2skxdh/image/upload/v1702105528/M-Flix/menu_bar_xjybzt.png)
+- **My dishes:**
+  ![My dishes page](https://res.cloudinary.com/dnh2skxdh/image/upload/v1706969954/Nutri/my_dishes_j7gehg.png)
 
-- **Genre:**
-  ![Genre](https://res.cloudinary.com/dnh2skxdh/image/upload/v1702105629/M-Flix/genre_pehxd9.png)
-  ![Genre Page](https://res.cloudinary.com/dnh2skxdh/image/upload/v1702105696/M-Flix/genres_a2yof2.png)
+- **Create Dishe:**
+  ![Create Dishe](https://res.cloudinary.com/dnh2skxdh/image/upload/v1706969958/Nutri/create_dishe_wx7il8.png)
+  ![Saved Dishe](https://res.cloudinary.com/dnh2skxdh/image/upload/v1706969962/Nutri/saved_dishe_qt3liv.png)
   
-- **Add to favoriets:**
-  ![Add to favoriets button](https://res.cloudinary.com/dnh2skxdh/image/upload/v1702105874/M-Flix/add_to_fav_zu8wwc.png)
-
-- **My Favorites:**
-  ![My favorites page](https://res.cloudinary.com/dnh2skxdh/image/upload/v1702105980/M-Flix/my_favList_qjtqnh.png)
 
 ## License
 
